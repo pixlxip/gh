@@ -1,6 +1,6 @@
 export default {
   async fetch(request) {
-    const requestBody = (() => {
+    const requestBody = (async () => {
       if (request.body) {
         const requestBodyReader = request.body.getReader();
         const requestBodyArray = await requestBodyReader.read();
